@@ -7,24 +7,7 @@
     <div class="input-search">
       <Input v-model="keyword" placeholder="全局搜索..." style="width: 300px"/>
       <Button type="primary" @click="clearSearch">清空搜索</Button>
-
-      <Button @click="value1 = true" type="primary">打开说明</Button>
-      <Drawer width="20" title="说明" :closable="false" v-model="value1">
-        <div class="content-des">
-          <h4>介绍</h4>
-           
-        </div>
-
-        <div class="content-des">
-          <h4>更新历史</h4>
-          <p>22222</p>
-        </div>
-
-        <div class="content-des">
-          <h4>其它说明</h4>
-          <p>22222</p>
-        </div>
-      </Drawer>
+      <DescriptionForm ></DescriptionForm>
     </div>
 
     <Tabs>
@@ -45,10 +28,12 @@
 </template>
 
 <script>
+  // 引入函数功能模块（分割面板区域）
   import FunctionForm from './components/FunctionForm'
+  // 引入侧边抽屉描述组件
+  import DescriptionForm from './components/DescriptionForm'
   import {navData} from '../static/js/nav_json.js'
   import {searchName} from '../static/js/search_json.js'
-  // import {dedupe} from "../static/js/utils";
   import Vue from 'vue'
 
   let searchFunNameJsonData = $.parseJSON(navData);
@@ -60,7 +45,7 @@
         jsonData: searchFunNameJsonData,
         sectionsChildren: [],//全局搜索结果集合
         keyword: '',// 全局搜索关键词
-        value1: false,
+
 
         tmpIndex: '',
         tmpTabTitle: '',
@@ -79,7 +64,7 @@
 
       }
     },
-    components: {FunctionForm},
+    components: {FunctionForm,DescriptionForm},
     methods: {
       clearSearch: function () {
         this.sectionsChildren=[];
