@@ -18,11 +18,7 @@
 </template>
 
 <script>
-  import 'iview/dist/styles/iview.css';
-
   import FunctionForm from './components/FunctionForm'
-
-
   import {navData} from '../static/js/nav_json.js'
 
   let searchFunNameJsonData = $.parseJSON(navData);
