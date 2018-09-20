@@ -1,9 +1,11 @@
 <template>
   <div class="my-split">
+
     <Split v-model="split3" min="150px">
       <!--左侧-->
       <div slot="left" class="my-split-pane no-padding">
         <Split v-model="split4" mode="vertical">
+
           <!--左侧上面板-->
           <div slot="top" class="my-split-pane_top">
             <ul class="live">
