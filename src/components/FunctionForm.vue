@@ -1,6 +1,7 @@
 <template>
   <div class="my-split">
 
+
     <Split v-model="split3" min="150px">
       <!--左侧-->
       <div slot="left" class="my-split-pane no-padding">
@@ -8,7 +9,21 @@
 
           <!--左侧上面板-->
           <div slot="top" class="my-split-pane_top">
-            <ul class="live">
+            <div style="padding-bottom: 3px" v-if="sectionsChildren.length>0">
+              共计搜索到{{sectionsChildren.length}}个函数：
+            </div>
+            <ul class="live" v-if="sectionsChildren.length>0">
+              <li v-for="(childrenItem,index_item) in sectionsChildren">
+                <a
+                  @mouseenter="showSummary(childrenItem.summary)"
+                  @click="showContent(childrenItem.href)"
+                  href="#">
+                  {{childrenItem.name}}
+                </a>
+              </li>
+            </ul>
+
+            <ul class="live" v-else>
               <li v-for="(childrenItem,index_item) in fenleiChildren">
                 <a
                   @mouseenter="showSummary(jsonData.topics[childrenItem].summary)"
@@ -34,6 +49,7 @@
                   marginheight=0></iframe>
         </div>
       </div>
+
     </Split>
   </div>
 </template>
@@ -41,7 +57,7 @@
 <script>
   export default {
     name: "FunctionForm",
-    props: ['jsonData', 'fenleiChildren', 'fenleiKey', 'fenleiIndex'],
+    props: ['jsonData', 'fenleiChildren', 'fenleiKey', 'fenleiIndex', 'sectionsChildren'],
     data: function () {
       return {
         split3: 0.2,
@@ -58,7 +74,8 @@
         let path = 'static/html/' + url;
         this.iframeSrc = path;
       }
-    }
+    },
+
   }
 </script>
 
