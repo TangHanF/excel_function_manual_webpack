@@ -28,7 +28,7 @@
       <!--右侧面板-->
       <div slot="right" class="my-split-pane_right">
         <div style="padding: 30px;overflow: auto">
-          <iframe :src="iframeSrc" width="100%" height="590px" frameborder=no border=0 marginwidth=0
+          <iframe :src="iframeSrc" width="100%" height="500px" frameborder=no border=0 marginwidth=0
                   marginheight=0></iframe>
         </div>
       </div>

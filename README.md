@@ -1,6 +1,8 @@
 # excel_function_manual_webpack
 
-# excel_function_manual_webpack
+# 效果图
+
+![](https://ws1.sinaimg.cn/large/006tNbRwly1fvg0w89dd5j31kw0sf11p.jpg)
 
 > 一个用vue+webpack+iview创建的Excel函数帮助手册
 
