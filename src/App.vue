@@ -9,6 +9,18 @@
       <Input v-model="keyword" placeholder="全局搜索..." style="width: 300px"/>
       <Button type="primary" @click="clearSearch">清空搜索</Button>
       <DescriptionForm></DescriptionForm>
+
+      <Dropdown>
+        <Button type="primary">
+          访问项目/库
+          <Icon type="ios-arrow-down"></Icon>
+        </Button>
+        <DropdownMenu slot="list">
+          <DropdownItem v-for="info in projectInfos" :key="info.url">
+            <a :href="info.url" target="_blank">{{info.title}}</a>
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
     </div>
 
     <Tabs>
@@ -64,7 +76,27 @@
               }
             })
           ])
-        }
+        },
+
+        // 下拉项目库信息对象集合
+        projectInfos: [
+          {
+            title: 'Gitee库地址(最新版)',
+            url: 'https://gitee.com/TangHanF/excel_function_manual_webpack'
+          },
+          {
+            title: 'GitHub库地址（最新版）',
+            url: 'https://github.com/TangHanF/excel_function_manual_webpack'
+          },
+          {
+            title: 'Gitee库地址(第一版)',
+            url: 'https://gitee.com/TangHanF/excel_function_manual'
+          },
+          {
+            title: 'GitHub库地址（第一版）',
+            url: 'https://github.com/TangHanF/excel_function_manual'
+          },
+        ],
 
       }
     },
