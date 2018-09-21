@@ -1,6 +1,7 @@
 <template>
 
   <div id="app">
+    <router-view></router-view>
     <div style="margin: 10px 0px 10px 0px">
       <h2>Excel函数帮助手册</h2>
     </div>
