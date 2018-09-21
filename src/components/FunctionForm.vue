@@ -57,7 +57,29 @@
 <script>
   export default {
     name: "FunctionForm",
-    props: ['jsonData', 'fenleiChildren', 'fenleiKey', 'fenleiIndex', 'sectionsChildren'],
+    props: {
+      jsonData: {
+        type: Object,
+        required: true
+      },
+      fenleiChildren: {
+        type: Array,
+        required: true
+      },
+      fenleiKey: {
+        type: String,
+        default: ''
+      },
+      fenleiIndex: {
+        type: Number,
+        required:true
+      },
+      sectionsChildren: {
+        type:Array,
+        required:true
+      }
+    },
+    // props: ['jsonData', 'fenleiChildren', 'fenleiKey', 'fenleiIndex', 'sectionsChildren'],
     data: function () {
       return {
         split3: 0.2,

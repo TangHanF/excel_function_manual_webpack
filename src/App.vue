@@ -8,11 +8,14 @@
     <div class="input-search">
       <Input v-model="keyword" placeholder="全局搜索..." style="width: 300px"/>
       <Button type="primary" @click="clearSearch">清空搜索</Button>
-      <DescriptionForm ></DescriptionForm>
+      <DescriptionForm></DescriptionForm>
     </div>
 
     <Tabs>
-      <TabPane v-for="(fenlei,key,index) in jsonData.sections" :label="(index+1)+'、'+fenlei.name" icon="ios-pricetags">
+      <TabPane v-for="(fenlei,key,index) in jsonData.sections"
+               :key="key"
+               :label="(index+1)+'、'+fenlei.name"
+               icon="ios-pricetags">
         <!--<TabPane v-for="(fenlei,key,index) in jsonData.sections" :label="label">-->
 
         <FunctionForm
@@ -65,10 +68,10 @@
 
       }
     },
-    components: {FunctionForm,DescriptionForm},
+    components: {FunctionForm, DescriptionForm},
     methods: {
       clearSearch: function () {
-        this.sectionsChildren=[];
+        this.sectionsChildren = [];
         // Vue.set(this.sectionsChildren, index, searchFunNameJsonData.topics[key]);
         this.keyword = '';
       }
@@ -78,7 +81,7 @@
       keyword: function (newKeyword) {
 
         //清空搜索框时直接return回去
-        if($.trim(newKeyword)==='')
+        if ($.trim(newKeyword) === '')
           return;
 
         //匹配函数名搜索

@@ -5,7 +5,9 @@ const webpack = require('webpack')
 // const glob = require('glob');
 // const PurifyCSSPlugin = require('purifycss-webpack');
 
+// 引入utils
 const utils = require('./utils')
+// 引入当前配置，config文件夹下面的index.js
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
