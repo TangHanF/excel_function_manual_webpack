@@ -6,11 +6,14 @@
         <Card :bordered="false">
           <p slot="title">介绍</p>
           <p> 欢迎各位Star、Fork进行完善。时间有限，没做细致优化，有意向者可以一起完善
-            对外发布、提供服务请保留项目地址，谢谢合作</p>
-          <p style="color: red">
-            <strong>本项目（Excel_Function_Manual_Webpack）是基于原来的 <a href="https://tanghanf.gitee.io/excel_function_manual/">《Excel函数帮助手册》</a>
-              进行的修改。目前样式、布局相较于之前可以说操作更加便捷。</strong>
-          </p>
+            对外发布、提供服务请保留项目地址，谢谢合作</p><br>
+
+          <blockquote>
+            <small>
+              本项目（Excel_Function_Manual_Webpack）是基于原来的 <a href="https://tanghanf.gitee.io/excel_function_manual/">《Excel函数帮助手册》</a>进行的修改。目前样式、布局相较于之前可以说操作更加便捷。
+            </small>
+          </blockquote>
+
           <Divider>我是华丽分割线</Divider>
           <p class="text_indent">
             本手册分为10个大分类，涉及到常用Excel函数的方方面面，并且有详尽的描述和相关案例，学习起来很直观。

@@ -2,14 +2,16 @@
 const path = require('path')
 const webpack = require('webpack')
 
+// const glob = require('glob');
+// const PurifyCSSPlugin = require('purifycss-webpack');
+
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
-
 
 
 module.exports = {
@@ -40,7 +42,12 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
-    })
+    }),
+    // new PurifyCSSPlugin({
+    //   // 给出路径解析规则。这些应该是绝对路径!
+    //   paths: glob.sync(path.join(__dirname, './src/*.vue')),//src目录下的所有html模板都会被影响
+    // })
+
   ],
   module: {
     rules: [
