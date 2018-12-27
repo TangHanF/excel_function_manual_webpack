@@ -1,7 +1,10 @@
 <template>
 
   <div id="app">
-    <router-view></router-view>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <!--<router-view></router-view>-->
+
     <div style="margin: 10px 0px 10px 0px">
       <h2>Excel函数帮助手册</h2>
     </div>
@@ -67,7 +70,6 @@
         tmpTabTitle: '',
 
         label: (h) => {
-          debugger
           return h('div', [
             h('span', this.tmpTabTitle),
             h('Badge', {

@@ -45,6 +45,7 @@
       <!--右侧面板-->
       <div slot="right" class="my-split-pane_right">
         <div style="padding: 30px;overflow: auto">
+          <!--TODO 可使用 router-view方式-->
           <iframe :src="iframeSrc" width="100%" height="500px" frameborder=no border=0 marginwidth=0
                   marginheight=0></iframe>
         </div>
@@ -79,7 +80,6 @@
         required:true
       }
     },
-    // props: ['jsonData', 'fenleiChildren', 'fenleiKey', 'fenleiIndex', 'sectionsChildren'],
     data: function () {
       return {
         split3: 0.2,
