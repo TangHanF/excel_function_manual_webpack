@@ -8,7 +8,7 @@
 >
 > - 对外发布、提供服务请保留项目地址，谢谢合作
 >
-> - 本项目（[Excel_Function_Manual_Webpack](https://tanghanf.gitee.io/excel_function_manual/)）是基于原来的 《Excel函数帮助手册》进行的修改。目前样式、布局相较于之前可以说操作更加便捷。
+> - 本项目（[Excel_Function_Manual_Webpack](https://tanghanf.gitee.io/excel_function_manual/)）是基于原来的 [《Excel函数帮助手册》](https://github.com/TangHanF/excel_function_manual/issues/1)进行的修改。目前样式、布局相较于之前可以说操作更加便捷。
 
 -----
 
