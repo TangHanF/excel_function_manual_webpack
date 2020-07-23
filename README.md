@@ -21,13 +21,10 @@
 
 # 效果图
 
-![效果图1](https://ws4.sinaimg.cn/large/006tNbRwly1fvhanoqhojj31kw0umjw1.jpg)
+![效果图1](https://gitee.com/TangHanF/pic/raw/master/uPic/XbQe3d.png)
 
-![搜索1](https://ws2.sinaimg.cn/large/006tNbRwly1fvha2v4depj31kw0ugk11.jpg)
+![搜索1](https://gitee.com/TangHanF/pic/raw/master/uPic/YFilVz.png)
 
-![搜索2](https://ws2.sinaimg.cn/large/006tNbRwly1fvha3jz3luj31kw0uc7cy.jpg)
-
-![侧边抽屉](https://ws3.sinaimg.cn/large/006tNbRwly1fvha46rgktj31kw0v07hc.jpg)
 
 # 项目地址
 
@@ -80,4 +77,3 @@ npm run e2e
 # 运行所有测试
 npm test
 ```
-
